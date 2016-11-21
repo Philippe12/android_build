@@ -50,7 +50,7 @@ HOST_GLOBAL_CFLAGS += -isysroot $(mac_sdk_root) -mmacosx-version-min=$(mac_sdk_v
 HOST_GLOBAL_CPPFLAGS += -isystem $(mac_sdk_path)/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1
 HOST_GLOBAL_LDFLAGS += -isysroot $(mac_sdk_root) -Wl,-syslibroot,$(mac_sdk_root) -mmacosx-version-min=$(mac_sdk_version)
 
-HOST_GLOBAL_CFLAGS += -fPIC -funwind-tables -Wdeprecated-declarations
+HOST_GLOBAL_CFLAGS += -fPIC -funwind-tables -Wno-deprecated-declarations
 HOST_NO_UNDEFINED_LDFLAGS := -Wl,-undefined,error
 
 HOST_SHLIB_SUFFIX := .dylib
